@@ -1,95 +1,91 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+'use client';
+import React, { useState } from 'react';
+import Navbar from '../components/Navbar';
+import SmallBottom from '../components/SmallButtom';
+import Icondiv from '../components/Icondiv';
+import Bookingcss from "../components/Bookingcss";
+import Fromto from "../components/Fromto";
+import Bottom from "../components/Bottom";
+import FareTypes from "../components/FareTypes";
+import Smallbutton from '../components/Smallbutton';
 
 export default function Home() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  return (      
+    <div>
+      <Navbar>
+        <div className="topdiv">
+          <img
+            className="laltain"
+            src="https://imgak.mmtcdn.com/pwa_v3/pwa_commons_assets/desktop/DiwaliLantern.webp"
+            alt=""
+          />  {/* background image */}
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+            <img
+              className="mmtlogo"
+              src={
+                "https://imgak.mmtcdn.com/pwa_v3/pwa_hotel_assets/header/mmtLogoWhite.png"
+              }
+              alt="Logo"
+            />  {/* mmt logo on top left corner */}
+          <div className="login">
+            Login
+          </div>
+
+          <Smallbutton>
+            <div className="smallbuttonpic">
+            </div>
+            <div>
+              <h4>My Trips</h4>
+              <p>Manage your Bookings</p>
+            </div>
+          </Smallbutton>
+
+          <Smallbutton>
+            <div className="smallbuttonpic">
+              <img
+                src="https://imgak.mmtcdn.com/mybiz/assets/images/landing/myBizLogo_light.png"
+                alt=""
+              />
+            </div>
+            <div>
+              <h4>Introducing myBiz</h4>
+              <p>MakeMyTrip for Buisness</p>
+            </div>
+          </Smallbutton>
+        </div>   {/* upper box */}
+
+      
+        <Bookingcss>
+          <Icondiv className="icondiv"></Icondiv> {/* mid upper tab */}
+          <div className="checkboxdiv">
+            <div>
+              <input type="checkbox" />
+              <label htmlFor="">ONEWAY</label>
+              <input type="checkbox" />
+              <label htmlFor="">ROUNDWAY</label>
+              <input type="checkbox" />
+              <label htmlFor="">MULTI CITY</label>
+            </div>
+            <div>INTERNATIONAL FLIGHTS | DOMESTIC FLIGHTS</div>
+          </div>  {/* upper div */}
+          
+          <Fromto/>   {/* mid div */}
+          <FareTypes />  {/* lower div */}
+        </Bookingcss>
+
+        <div className="button">
+          <button>
+            Search
+          </button>
+        </div>    {/* Search button*/}
+
+      </Navbar>
+
+      
+      <div style={{ background: "#ebe7e7", paddingTop: "50px" }}>
+        <SmallBottom /> {/* middle buttons */}
+        <Bottom /> {/* 4 last div */}
+      </div>
     </div>
   );
 }
