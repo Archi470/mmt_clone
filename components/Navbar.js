@@ -1,4 +1,4 @@
-'use client'; // This directive must be placed at the top of your component
+'use client'
 import styled from 'styled-components'
 export const Navbar = styled.div`
 height: 500px;
