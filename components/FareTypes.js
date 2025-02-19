@@ -1,110 +1,42 @@
 'use client';
 
-import styled from "styled-components";
-const Style = styled.div`
-  align-items: center;
-  color: #4a4a4a;
-  display: flex;
-  font-size: 14px;
-  justify-content: space-between;
-  margin: 0px 0px 20px;
-  height: 50px;
-  width: 98%;
-  margin: auto;
-  margin-top: 10px;
-  .selectBox {
-    align-items: center;
-    background-color: #eaf5ff;
-    border-radius: 4px 0px 0px 4px;
-    color: #4a4a4a;
-    display: flex;
-    margin-left: 5px;
-    font-size: 12px;
-    width: 80px;
-    font-weight: 700;
-    line-height: 14px;
-    /* padding: 8px 8px 8px 26px; */
-    height: 100%;
-    text-align: left;
-  }
-  .div {
-    align-items: center;
-    color: #4a4a4a;
-    display: flex;
-    font-size: 14px;
-  }
-  .first {
-    color: #9b9b9b;
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 14px;
-    margin: 0px 5px 0px 0px;
-    width: 56px;
-  }
-  .div2 {
-    align-items: center;
-    color: #4a4a4a;
-    display: flex;
-    font-size: 14px;
-    justify-content: center;
-    margin: 0px 0px 0px 10px;
-  }
-  .selectBox1 {
-    background-color: #f2f2f2;
-    border-radius: 4px;
-    color: #4a4a4a;
-    display: flex;
-    flex-direction: column;
-    font-size: 14px;
-    margin: 8px;
-    padding-left: 10px;
-    padding-right: 10px;
-    height: 30px;
-    p {
-      position: relative;
-      top: 5px;
-    }
-  }
-  .second {
-    color: #4a4a4a;
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 12px;
-  }
-`;
-
 const FareTypes = () => {
   return (
-    <Style>
-      <div className="div">
-        <div className="first">Select a fare type</div>
-        <div className="selectBox">
-          <input type="radio" />
-          <p>Regular fees</p>
-        </div>        
-        <div className="selectBox">
-          <input type="radio" />
-          <p>Student fares</p>
-        </div>
-        <div className="selectBox">
-          <input type="radio" />
-          <p>Senior Citizen</p>
-        </div>
-        <div className="selectBox">
-          <input type="radio" />
-          <p>Double seat</p>
+    <div className="flex flex-col items-center w-[98%] h-50 mx-auto mt-2 text-gray-700">
+      {/* Fare Type Selection */}
+      <div className="flex items-center justify-between w-full mb-5 text-sm">
+        <div className="mr-2 font-bold text-gray-400 text-xs w-14">Select a fare type</div>
+        <div className="flex items-center space-x-2">
+          <div className="flex items-center h-full px-2 text-xs font-bold text-left bg-blue-100 rounded-l-md">
+            <input type="radio" className="mr-1" />
+            <p>Regular fees</p>
+          </div>
+          <div className="flex items-center h-full px-2 text-xs font-bold text-left bg-blue-100 rounded-l-md">
+            <input type="radio" className="mr-1" />
+            <p>Student fares</p>
+          </div>
+          <div className="flex items-center h-full px-2 text-xs font-bold text-left bg-blue-100 rounded-l-md">
+            <input type="radio" className="mr-1" />
+            <p>Senior Citizen</p>
+          </div>
+          <div className="flex items-center h-full px-2 text-xs font-bold text-left bg-blue-100 rounded-l-md">
+            <input type="radio" className="mr-1" />
+            <p>Double seat</p>
+          </div>
         </div>
       </div>
-      <div className="div2">
-        <div className="second">Trending Searches:</div>
-        <div className="selectBox1">
-          <p>Chennai to Hydrabad</p>
+
+      {/* Trending Searches */}
+      <div className="flex items-center mt-2 text-sm">
+        <div className="mr-2 text-xs font-bold">Trending Searches:</div>
+        <div className="flex flex-col justify-center px-2 py-1 mx-2 text-sm text-gray-700 bg-gray-200 rounded-md">
+          <p>Chennai to Hyderabad</p>
         </div>
-        <div className="selectBox1">
+        <div className="flex flex-col justify-center px-2 py-1 mx-2 text-sm text-gray-700 bg-gray-200 rounded-md">
           <p>Delhi to Kolkata</p>
         </div>
       </div>
-    </Style>
+    </div>
   );
 };
 
